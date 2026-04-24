@@ -3,19 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>100 ਸਾਲ • ਪ੍ਰੀਮੀਅਮ ਟਰੈਕਰ</title>
+    <title>Life • 100 ਸਾਲ ਟਰੈਕਰ</title>
     
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#faf9f6">
     <link rel="apple-touch-icon" href="icon-192.png">
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             background-color: #faf9f6;
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
@@ -26,162 +21,26 @@
             padding: 3rem 1.5rem;
             color: #333333;
         }
-
-        .container {
-            max-width: 900px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* ਜਨਮ ਤਰੀਕ */
-        .header-area {
-            margin-bottom: 3.5rem;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-        
-        .date-picker {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .date-picker label {
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #8c857b;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .date-picker input {
-            background: transparent;
-            border: none;
-            outline: none;
-            font-size: 1.15rem;
-            color: #4a443c;
-            font-weight: 600;
-            cursor: pointer;
-            font-family: inherit;
-        }
-
-        /* ਡੈਸ਼ਬੋਰਡ */
-        .dashboard {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 3.5rem;
-            margin-bottom: 5rem;
-            width: 100%;
-            max-width: 800px;
-        }
-
-        /* ਅੰਕੜਿਆਂ ਦਾ ਗਰਿੱਡ */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2.5rem 4rem;
-            flex-grow: 1;
-        }
-
-        .stat-item {
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-        }
-
-        .stat-number {
-            font-size: 2.2rem;
-            font-weight: 300;
-            color: #2c3e50;
-            line-height: 1;
-        }
-
-        .stat-label {
-            font-size: 0.7rem;
-            color: #9e978e;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            margin-top: 6px;
-            white-space: nowrap;
-        }
-
-        /* ਗੋਲਾ */
-        .percentage-container {
-            position: relative;
-            width: 100px;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .percentage-svg {
-            transform: rotate(-90deg);
-            width: 100%;
-            height: 100%;
-        }
-
-        .percentage-bg {
-            fill: none;
-            stroke: #ebe7e0;
-            stroke-width: 4;
-        }
-
-        .percentage-bar {
-            fill: none;
-            stroke: #9ab4c4;
-            stroke-width: 4;
-            stroke-linecap: round;
-            stroke-dasharray: 282.7;
-            stroke-dashoffset: 282.7;
-            transition: stroke-dashoffset 1.5s ease-out;
-        }
-
-        .percentage-text {
-            position: absolute;
-            font-size: 1.4rem;
-            font-weight: 300;
-            color: #2c3e50;
-        }
-
-        /* 100 ਸਾਲ ਦੇ ਬਿੰਦੂ */
-        .smudges-grid {
-            display: grid;
-            grid-template-columns: repeat(10, 1fr);
-            gap: clamp(12px, 3.5vw, 30px);
-            padding: 1rem;
-        }
-
-        .smudge {
-            width: clamp(22px, 3.8vw, 34px);
-            height: clamp(12px, 2vw, 18px);
-            background-color: #ebe7e0;
-            border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.6rem;
-            font-weight: 700;
-            color: rgba(74, 68, 60, 0.3);
-            filter: blur(0.4px);
-            transition: all 0.6s ease;
-        }
-
-        .smudge.filled {
-            background-color: #9ab4c4;
-            opacity: 0.85;
-            color: rgba(255, 255, 255, 0.8);
-        }
-
+        .container { max-width: 900px; width: 100%; display: flex; flex-direction: column; align-items: center; }
+        .header-area { margin-bottom: 3.5rem; width: 100%; display: flex; justify-content: center; }
+        .date-picker { display: flex; align-items: center; gap: 12px; }
+        .date-picker label { font-size: 0.9rem; font-weight: 500; color: #8c857b; text-transform: uppercase; letter-spacing: 1px; }
+        .date-picker input { background: transparent; border: none; outline: none; font-size: 1.15rem; color: #4a443c; font-weight: 600; cursor: pointer; font-family: inherit; }
+        .dashboard { display: flex; align-items: center; justify-content: center; gap: 3.5rem; margin-bottom: 5rem; width: 100%; max-width: 800px; }
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem 4rem; flex-grow: 1; }
+        .stat-item { display: flex; flex-direction: column; text-align: left; }
+        .stat-number { font-size: 2.2rem; font-weight: 300; color: #2c3e50; line-height: 1; }
+        .stat-label { font-size: 0.7rem; color: #9e978e; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; margin-top: 6px; white-space: nowrap; }
+        .percentage-container { position: relative; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .percentage-svg { transform: rotate(-90deg); width: 100%; height: 100%; }
+        .percentage-bg { fill: none; stroke: #ebe7e0; stroke-width: 4; }
+        .percentage-bar { fill: none; stroke: #9ab4c4; stroke-width: 4; stroke-linecap: round; stroke-dasharray: 282.7; stroke-dashoffset: 282.7; transition: stroke-dashoffset 1.5s ease-out; }
+        .percentage-text { position: absolute; font-size: 1.4rem; font-weight: 300; color: #2c3e50; }
+        .smudges-grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: clamp(12px, 3.5vw, 30px); padding: 1rem; }
+        .smudge { width: clamp(22px, 3.8vw, 34px); height: clamp(12px, 2vw, 18px); background-color: #ebe7e0; border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; font-weight: 700; color: rgba(74, 68, 60, 0.3); filter: blur(0.4px); transition: all 0.6s ease; }
+        .smudge.filled { background-color: #9ab4c4; opacity: 0.85; color: rgba(255, 255, 255, 0.8); }
         .smudge:nth-child(even) { transform: rotate(3deg); border-radius: 40% 60% 30% 70%; }
         .smudge:nth-child(odd) { transform: rotate(-2deg); border-radius: 70% 30% 50% 50%; }
-
         @media (max-width: 650px) {
             .dashboard { gap: 1.5rem; }
             .stats-grid { gap: 1.8rem 1.2rem; }
@@ -205,7 +64,7 @@
         <div class="stats-grid">
             <div class="stat-item">
                 <span class="stat-number" id="elapsedDays">0</span>
-                <span class="stat-label">ਉਮਰ ਦੇ ਲੰਘੇ ਦਿਨ</span>
+                <span class="stat-label">ਲੰਘੇ ਦਿਨ</span>
             </div>
             <div class="stat-item">
                 <span class="stat-number" id="remainingDays">0</span>
@@ -217,7 +76,7 @@
             </div>
             <div class="stat-item">
                 <span class="stat-number" id="remainingYears">0</span>
-                <span class="stat-label">100 'ਚੋਂ ਬਾਕੀ ਸਾਲ</span>
+                <span class="stat-label">100 'ਚੋਂ ਬਾਕੀ</span>
             </div>
         </div>
 
@@ -234,16 +93,11 @@
 </div>
 
 <script>
-    // ਸਰਵਿਸ ਵਰਕਰ ਰਜਿਸਟਰ ਕਰਨ ਦਾ ਕੋਡ
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js')
-          .then(registration => {
-            console.log('Service Worker registered successfully');
-          })
-          .catch(error => {
-            console.log('Service Worker registration failed:', error);
-          });
+          .then(reg => console.log('v2 registered'))
+          .catch(err => console.log('Failed:', err));
       });
     }
 
